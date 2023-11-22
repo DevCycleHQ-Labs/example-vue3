@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest"
   },
   "dependencies": {
-    "@devcycle/devcycle-js-sdk": "^1.15.1",
+    "@devcycle/js-client-sdk": "^1.15.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {

@@ -14,22 +14,22 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@devcycle/devcycle-js-sdk@^1.15.1":
-  version "1.15.1"
-  resolved "https://registry.yarnpkg.com/@devcycle/devcycle-js-sdk/-/devcycle-js-sdk-1.15.1.tgz#7a0f87f0bb99866855de174c394f44ba1227dfb8"
-  integrity sha512-+sWUVoxFYaNjUVOQ7YnacWaY8itUt/m1kCSu0OyxqrnBA9N2QOwM+lH+gC9+iJ/UMHM6c4D+p4xOoSxMHR3x5g==
+"@devcycle/js-client-sdk@^1.15.1":
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/@devcycle/js-client-sdk/-/js-client-sdk-1.15.2.tgz#0379941673e2899a580bcf50bc9d9c1f86d886b3"
+  integrity sha512-7AhLTAVXIOeRoyUWGangvRsSL+gzUmwmtcfcXTITixuG+vG+5nnHR5YJ17N5MqFA7vm3sLlVYYfI+EyJmfWd/w==
   dependencies:
-    "@devcycle/types" "^1.3.0"
+    "@devcycle/types" "^1.3.1"
     axios "^1.0.0"
     axios-retry "^3.3.1"
     lodash "^4.17.21"
     ua-parser-js "^1.0.36"
     uuid "^8.3.2"
 
-"@devcycle/types@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@devcycle/types/-/types-1.3.0.tgz#2fe8a39ab6a43559d12eb00bd632d551fe2d465e"
-  integrity sha512-kKNgTbTpWGT4ROncJUsw16YCSk3TTy5MhcPKVDe7EgIHK3JfVibL5ETouAqsj467/xQs235W/TGJ5uryi7kRVw==
+"@devcycle/types@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@devcycle/types/-/types-1.3.1.tgz#e7e17042f17d5cdd4be06ec6db21afc3f6eef0d2"
+  integrity sha512-9IQCqDCENVi1pV55mlpeJ65BNWR3wwuXk+2M2dclWpKelL2wTCa/C5xBI4GrihUI9TGyOoECXFxKfhGHYjntPA==
   dependencies:
     "@nestjs/class-validator" "^0.13.4"
     class-transformer "0.5.1"

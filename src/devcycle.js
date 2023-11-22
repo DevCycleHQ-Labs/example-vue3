@@ -1,4 +1,4 @@
-import * as DevCycle from '@devcycle/devcycle-js-sdk'
+import * as DevCycle from '@devcycle/js-client-sdk'
 import users from './data/users'
 
 let devcycleClient = null
