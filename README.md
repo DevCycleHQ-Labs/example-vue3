@@ -12,19 +12,19 @@ When you run the example app and switch your identity between users, you'll be a
 
 ## Running the Example
 
-* Run `yarn install` in the project directory to install dependencies
+* Run `npm install` in the project directory to install dependencies
 * Create a `.env` file and set `VITE_DEVCYCLE_CLIENT_SDK_KEY` to the SDK Key for your environment.\
 You can find this under [Settings > Environments](https://app.devcycle.com/r/environments) on the DevCycle dashboard. [Learn more about environments](https://docs.devcycle.com/essentials/environments).
 
-### `yarn start`
+### `npm run start`
 
 Compile and Hot-Reload for Development
 
-### `yarn build`
+### `npm run build`
 
 Compile and Minify for Production
 
-### `yarn test`
+### `npm run test`
 
 Run Unit Tests with [Vitest](https://vitest.dev/)
 
