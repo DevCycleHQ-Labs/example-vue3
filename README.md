@@ -11,20 +11,27 @@ When you run the example app and switch your identity between users, you'll be a
 
 
 ## Running the Example
+### Setup
 
 * Run `npm install` in the project directory to install dependencies
 * Create a `.env` file and set `VITE_DEVCYCLE_CLIENT_SDK_KEY` to the SDK Key for your environment.\
 You can find this under [Settings > Environments](https://app.devcycle.com/r/environments) on the DevCycle dashboard. [Learn more about environments](https://docs.devcycle.com/essentials/environments).
 
-### `npm run start`
+### Development
+
+`npm run start`
 
 Compile and Hot-Reload for Development
 
-### `npm run build`
+### Building
+
+`npm run build`
 
 Compile and Minify for Production
 
-### `npm run test`
+### Testing
+
+`npm run test`
 
 Run Unit Tests with [Vitest](https://vitest.dev/)
 
