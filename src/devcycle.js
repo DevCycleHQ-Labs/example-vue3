@@ -1,5 +1,4 @@
 import * as DevCycle from '@devcycle/js-client-sdk'
-import users from './data/users'
 
 let devcycleClient = null
 
@@ -11,7 +10,12 @@ export function initializeDevCycle() {
 
   devcycleClient = DevCycle.initializeDevCycle(
     DEVCYCLE_CLIENT_SDK_KEY,
-    users[0], // initialize with user-1
+    // Modify this user object to see how it affects targeting
+    {
+      user_id: 'user-1',
+      name: 'User 1',
+      email: 'user1@email.com'
+    },
     { logLevel: 'debug' }
   )
   return devcycleClient
