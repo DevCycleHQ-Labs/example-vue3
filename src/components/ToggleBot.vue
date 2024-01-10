@@ -17,7 +17,6 @@
 <script>
 import { getDevCycleClient } from '../devcycle.js';
 
-
 export default {
   name: 'ToggleBot',
   data() {
@@ -46,23 +45,21 @@ export default {
       return shouldWink ? 'togglebot-wink.png' : 'togglebot.png'
     },
     getVariationName: () => {
-      const devcycleClient = getDevCycleClient()
-      return devcycleClient.config.features['hello-togglebot']?.variationName ?? 'Default'
+      const features = getDevCycleClient().allFeatures()
+      return features['hello-togglebot']?.variationName ?? 'Default'
     }
   },
   mounted() {
     const devcycleClient = getDevCycleClient()
 
-    const speedVariable = devcycleClient.variable('togglebot-speed', 'off')
-    this.spinSpeed = speedVariable.value
-    speedVariable.onUpdate((newValue) => {
-      this.spinSpeed = newValue
+    this.spinSpeed = devcycleClient.variableValue('togglebot-speed', 'off')
+    devcycleClient.subscribe('variableUpdated:togglebot-speed', (key, updatedVariable) => {
+      this.spinSpeed = updatedVariable.value
     })
 
-    const winkVariable = devcycleClient.variable('togglebot-wink', false)
-    this.shouldWink = winkVariable.value
-    winkVariable.onUpdate((newValue) => {
-      this.shouldWink = newValue
+    this.shouldWink = devcycleClient.variableValue('togglebot-wink', false)
+    devcycleClient.subscribe('variableUpdated:togglebot-wink', (key, updatedVariable) => {
+      this.shouldWink = updatedVariable.value
     })
   }
 }
