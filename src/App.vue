@@ -1,5 +1,5 @@
 <script setup>
-import UserContent from './components/UserContent.vue'
+import AppDescription from './components/AppDescription.vue'
 import ToggleBot from './components/ToggleBot.vue';
 </script>
 
@@ -24,38 +24,37 @@ export default {
      */
     await devcycleClient.onClientInitialized(() => {
       this.initialized = true
-
-      /**
-       * The "variable" method will return a variable object that can be used to
-       * access the variable's value and other properties.
-       * If no value is defined for the current user, the default value will be returned.
-       */
-      const greetingVariable = devcycleClient.variable('togglebot-greeting', 'Hello World!')
-      this.greeting = greetingVariable.value
-      greetingVariable.onUpdate((newValue) => {
-        console.log('greeting updated', newValue)
-        this.greeting = newValue
-      })
     })
   }
 }
 </script>
 
 <template>
-  <div v-if="initialized">
-    <ToggleBot />
-    <UserContent :msg="greeting" />
-  </div>
-  <div v-else>
-    <h1>Loading...</h1>
-  </div>
+  <div className="App">
+    <div className="App-header">
+      <p>Demo Application</p>
+      <img
+        height="46"
+        src="/devcycle-togglebot-full-colour.svg"
+        alt="DevCycle"
+      />
+    </div>
+    
+    <div v-if="initialized" className="App-wrapper">
+      <ToggleBot />
+      <AppDescription :msg="greeting" />
+    </div>
+    <div v-else>
+      <h2>Initializing...</h2>
+    </div>
 
-  <a
-    className="App-link"
-    href="https://docs.devcycle.com/sdk/client-side-sdks/javascript/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    DevCycle JS SDK Docs
-  </a>
+    <a
+      className="App-link"
+      href="https://docs.devcycle.com/sdk/client-side-sdks/javascript/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      DevCycle JS SDK Docs
+    </a>
+  </div>
 </template>
