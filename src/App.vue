@@ -10,7 +10,6 @@ export default {
   data() {
     return {
       initialized: false,
-      greeting: ''
     }
   },
   async mounted() {
@@ -42,7 +41,7 @@ export default {
     
     <div v-if="initialized" className="App-wrapper">
       <ToggleBot />
-      <AppDescription :msg="greeting" />
+      <AppDescription />
     </div>
     <div v-else>
       <h2>Initializing...</h2>

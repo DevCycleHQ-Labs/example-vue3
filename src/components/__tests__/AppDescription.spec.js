@@ -1,4 +1,4 @@
-import { describe, test, it, expect, vi, beforeEach } from 'vitest'
+import { describe, test, expect, vi, beforeEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils';
 
 import { getDevCycleClient } from '../../devcycle.js';
@@ -13,24 +13,13 @@ describe('AppDescription', () => {
     })
 
     test.each([
-        'variation-wink',
-        'variation-base',
-        'variation-custom',
-    ])('renders the app description correctly for variation "%s"', async (variationKey) => {
+        'default',
+        'step-1',
+        'step-2',
+        'step-3',
+    ])('renders the app description correctly for value "%s"', async (variableValue) => {
         mockGetDevCycleClient.mockReturnValue({
-            config: { features: {
-                'hello-togglebot': { variationKey }
-            }},
-            subscribe: vi.fn()
-        })
-        const wrapper = mount(AppDescription);
-        await flushPromises();
-        expect(wrapper.text()).toMatchSnapshot()
-    });
-
-    it('renders the app description correctly when user does not have feature', async () => {
-        mockGetDevCycleClient.mockReturnValue({
-            config: { features: {}},
+            variableValue: vi.fn().mockReturnValue(variableValue),
             subscribe: vi.fn()
         })
         const wrapper = mount(AppDescription);
