@@ -5,7 +5,7 @@ An example app built using [Vue.js](https://vuejs.org/) and the [DevCycle JS SDK
 ## Creating a Demo Feature
 This example app requires that your project has a feature with the expected variables, as well as some simple targeting rules. 
 
-#### ⇨ [Click here](https://app.devcycle.com/r/create?resource=feature&key=hello-togglebot) to automatically create the feature in your project ⇦
+#### ⇨ <a href="https://app.devcycle.com/r/create?resource=feature&key=hello-togglebot" target="_blank">Click here</a> to automatically create the feature in your project ⇦
 
 When you run the example app and switch your identity between users, you'll be able to see the feature's different variations.
 
