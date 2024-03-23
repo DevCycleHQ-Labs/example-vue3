@@ -10,7 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@devcycle/js-client-sdk": "^1.21.1",
+    "@devcycle/js-client-sdk": "^1.21.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {
