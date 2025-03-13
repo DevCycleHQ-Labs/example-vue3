@@ -16,7 +16,11 @@ export function initializeDevCycle() {
       name: 'User 1',
       email: 'user1@email.com'
     },
-    { logLevel: 'debug' }
+    { 
+      logLevel: 'debug',
+      // Controls the interval between flushing events to the DevCycle servers
+      eventFlushIntervalMS: 1000
+    }
   )
   return devcycleClient
 }
